@@ -38,12 +38,13 @@
             <div class="flex-none">
                 <div class="">
 
-                    <button class="btn rounded-full bg-[#ECFFF0]">100 <img class="w-6" src="./assets/coin.png"
-                            alt=""></button>
+                    <button class="btn rounded-full bg-[#ECFFF0]"><span id="coin">100</span> <img class="w-6"
+                            src="./assets/coin.png" alt=""></button>
                     <button class="btn rounded-full bg-[#ECFFF0]
                     font-bold  mx-3
                     "><span id="heartCount">0</span> <img class="w-6" src="./assets/heart.png" alt=""></button>
-                    <button class=" btn rounded-full text-white bg-[#29A74A]">2 copy</button>
+                    <button class=" btn rounded-full text-white bg-[#29A74A]"><span id="copyCount">0</span>
+                        copy</button>
                 </div>
             </div>
         </div>
@@ -73,14 +74,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">National Emergency Number</h3>
-                <p class="text-[#5C5C5C] text-base">National Emergency</p>
+                <p id="sId1" class="text-[#5C5C5C] text-base">National Emergency</p>
                 <h1 id="copy1" class="font-bold text-5xl">999</h1>
                 <button class="btn rounded-full mb-2">all</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy1')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy1','sId1')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 2nd card -->
@@ -90,14 +91,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Police Helpline Number</h3>
-                <p class="text-[#5C5C5C] text-base">Police</p>
+                <p id="sId2" class="text-[#5C5C5C] text-base">Police</p>
                 <h1 id="copy2" class="font-bold text-5xl">999</h1>
                 <button class="btn rounded-full mb-2">Police</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy2')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy2','sId2')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 3rd card -->
@@ -107,14 +108,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Fire Service Number</h3>
-                <p class="text-[#5C5C5C] text-base">Fire Service</p>
+                <p id="sId3" class="text-[#5C5C5C] text-base">Fire Service</p>
                 <h1 id="copy3" class="font-bold text-5xl">999</h1>
                 <button class="btn rounded-full mb-2">Fire</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy3')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy3','sId3')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 4th card -->
@@ -124,14 +125,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart "></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Ambulance Service</h3>
-                <p class="text-[#5C5C5C] text-base">Ambulance</p>
+                <p id="sId4" class="text-[#5C5C5C] text-base">Ambulance</p>
                 <h1 id="copy4" class="font-bold text-5xl">1994-999999</h1>
                 <button class="btn rounded-full mb-2">Health</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy4')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy4','sId4')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 5th card -->
@@ -141,14 +142,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart "></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Women & Child Helpline</h3>
-                <p class="text-[#5C5C5C] text-base">Women & Child Helpline</p>
+                <p id="sId5" class="text-[#5C5C5C] text-base">Women & Child Helpline</p>
                 <h1 id="copy5" class="font-bold text-5xl">109</h1>
                 <button class="btn rounded-full mb-2">Help</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy5')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy5','sId5')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 6th card -->
@@ -158,14 +159,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Anti-Corruption Helpline</h3>
-                <p class="text-[#5C5C5C] text-base">Anti-Corruption</p>
+                <p id="sId6" class="text-[#5C5C5C] text-base">Anti-Corruption</p>
                 <h1 id="copy6" class="font-bold text-5xl">106</h1>
                 <button class="btn rounded-full mb-2">Govt.</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy6')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy6','sId6')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 7th card -->
@@ -175,14 +176,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart "></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Electricity Helpline</h3>
-                <p class="text-[#5C5C5C] text-base">Electricity Outage</p>
+                <p id="sId7" class="text-[#5C5C5C] text-base">Electricity Outage</p>
                 <h1 id="copy7" class="font-bold text-5xl">16216</h1>
                 <button class="btn rounded-full mb-2">Electricity</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum( 'copy7')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy7','sId7')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 8th card -->
@@ -192,14 +193,14 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Brac Helpline</h3>
-                <p class="text-[#5C5C5C] text-base">Brac</p>
+                <p id="sId8" class="text-[#5C5C5C] text-base">Brac</p>
                 <h1 id="copy8" class="font-bold text-5xl">16445</h1>
                 <button class="btn rounded-full mb-2">NGO</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy8')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy8','sId8')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
             <!-- 9th card -->
@@ -209,31 +210,41 @@
                     <button class="love" onclick="countHeart()"><i class="fa-regular fa-heart "></i></button>
                 </div>
                 <h3 class="text-[#111111] text-2xl font-bold">Bangladesh Railway Helpline </h3>
-                <p class="text-[#5C5C5C] text-base">Bangladesh Railway</p>
+                <p id="sId9" class="text-[#5C5C5C] text-base">Bangladesh Railway</p>
                 <h1 id="copy9" class="font-bold text-5xl">163</h1>
                 <button class="btn rounded-full mb-2">Travel</button>
                 <div class="flex gap-x-3 justify-between">
                     <button class="btn  rounded-lg px-14" onclick="copyNum('copy9')"><i
                             class="fa-regular fa-copy"></i>copy</button>
-                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"><i
-                            class="fa-solid fa-phone text-white"></i>call</button>
+                    <button class="btn font-normal bg-[#00A63E] text-white rounded-lg px-14 font-sans"
+                        onclick="callBtn('copy9','sId9')"><i class="fa-solid fa-phone text-white"></i>call</button>
                 </div>
             </div>
         </div>
         <!-- card container end -->
         <!-- call history -->
-        <div class="grid grid-cols-1 col-span-1 py-10 pr-10">
-            <div class="bg-white rounded-xl">
-                <div class="flex justify-between items-center  p-3 ">
-                    <div class="flex items-center gap-x-3 ">
-                        <i class="fa-regular fa-clock"></i>
-                        <p class="font-semibold">Call History</p>
+        <div class="grid grid-cols-1 col-span-1 py-10 pr-10  ">
+            <div id="historyId" class="bg-white rounded-xl">
+                <div>
+                    <div class="flex justify-between items-center  p-3 ">
+                        <div class="flex items-center gap-x-3 ">
+                            <i class="fa-regular fa-clock"></i>
+                            <p class="font-semibold">Call History</p>
+                        </div>
+                        <button class="btn bg-[#29A74A] text-white rounded-full font-sans ">Clear</button>
                     </div>
-                    <button class="btn bg-[#29A74A] text-white rounded-full font-sans ">Clear</button>
                 </div>
+
+
+
+
+
             </div>
 
+
         </div>
+
+
     </section>
 
 
