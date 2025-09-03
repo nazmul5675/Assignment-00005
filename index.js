@@ -32,7 +32,7 @@ function callBtn(eId, sId) {
         const updatedCoin = parseInt(z) - 20;
         document.getElementById('coin').innerText = updatedCoin;
         const div = document.createElement('div');
-        div.innerHTML = `<div class="flex justify-between items-center bg-[#FAFAFA]  rounded-xl  p-5 mb-3 mx-5">
+        div.innerHTML = `<div class="flex justify-between items-center bg-[#FAFAFA]  rounded-xl  p-5 mb-3 mx-5 historyCards">
                     <div class=" text-base">
                         <h1 class="font-bold text-[#111111]">${y}</h1>
                         <p class="text-[#5C5C5C]">${x}</p>
@@ -45,3 +45,10 @@ function callBtn(eId, sId) {
         alert('Your balance is 0! Please recharge.')
     }
 }
+// call history clear btn function
+document.getElementById('clearBtn').addEventListener('click', function () {
+    const allHistory = document.querySelectorAll('.historyCards');
+    for (let i = 0; i < allHistory.length; i++) {
+        allHistory[i].remove();
+    }
+})
